@@ -1,0 +1,28 @@
+{
+  "name": "codetribe-library-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samukelokhathi/CodeTribe-Library-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samukelokhathi/CodeTribe-Library-API/issues"
+  },
+  "homepage": "https://github.com/Samukelokhathi/CodeTribe-Library-API#readme",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^26.6.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
