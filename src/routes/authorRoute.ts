@@ -7,12 +7,14 @@ import {
   createAuthor,
   updateAuthor,
   deleteAuthor,
+  getBooksByAuthor,
 } from "../controllers/authorsController";
 
 const authorRouter = Router();
 
 authorRouter.get("/", getAllAuthors);
 authorRouter.get("/:id", getAuthorById);
+authorRouter.get("/:id/book", getBooksByAuthor);
 authorRouter.post("/", createAuthor);
 authorRouter.put("/:id", updateAuthor);
 authorRouter.delete("/:id", deleteAuthor);
