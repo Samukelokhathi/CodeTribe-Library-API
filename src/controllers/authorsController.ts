@@ -15,3 +15,14 @@ export function getAuthorById(req: Request, res: Response, next: NextFunction) {
     res.status(404).json({ error: "Author not found" });
   }
 }
+
+
+export function createAuthor(req: Request, res: Response, next: NextFunction){
+    const {name} = req.body
+    const newAuthor: Author ={
+        id:authors.length + 1,
+        name
+    }
+    authors.push(newAuthor)
+    res.status(201).json(newAuthor)
+}
