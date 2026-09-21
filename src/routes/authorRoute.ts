@@ -1,3 +1,9 @@
-const authorRoutes = () => {};
+import { Router } from "express";
+import { getAllAuthors, getAuthorById } from "../controllers/authorsController";
 
-export default authorRoutes;
+const authorRouter = Router();
+
+authorRouter.get("/", getAllAuthors);
+authorRouter.get("/:id", getAuthorById);
+
+export default authorRouter;
