@@ -14,3 +14,20 @@ export function getBookById(req: Request, res: Response, next: NextFunction) {
     res.status(404).json({ error: "Book not found" });
   }
 }
+
+
+export function createBook(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  const { title, authorId, publishedDate } = req.body;
+  const newBook: book = {
+    id: books.length + 1,
+    title,
+    authorId,
+    publishedDate,
+  };
+  books.push(newBook);
+  res.status(201).json(newBook);
+}
