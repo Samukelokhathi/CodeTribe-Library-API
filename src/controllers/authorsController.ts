@@ -22,17 +22,15 @@ export function getBooksByAuthor(req: Request, res: Response) {
 
   const author = authors.find((auth) => auth.id == authorId);
 
-  if (author) {
-    res.status(200).json(author);
-  } else {
-    res.status(404).json({ error: "Author not found" });
+  if (!author) {
+    return res.status(404).json({ error: "Author not found" });
   }
 
   const authorBooks = books.filter(
     (book: { authorId: number }) => book.authorId === authorId,
   );
 
-  res.status(200).json({
+  return res.status(200).json({
     author,
     books: authorBooks,
   });
